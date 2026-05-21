@@ -58,6 +58,52 @@
   </button>
 
 </div>
+<script>
+
+/* =========================================
+   LANGUAGE TRANSLATION SYSTEM
+========================================= */
+
+function setLanguage(lang){
+
+  // Save selected language
+  localStorage.setItem("language", lang);
+
+  // Translate all elements
+  document.querySelectorAll("[data-en]").forEach(el => {
+
+    if(lang === "th"){
+
+      el.innerHTML = el.getAttribute("data-th");
+
+      document.documentElement.lang = "th";
+
+    } else {
+
+      el.innerHTML = el.getAttribute("data-en");
+
+      document.documentElement.lang = "en";
+
+    }
+
+  });
+
+}
+
+/* =========================================
+   LOAD SAVED LANGUAGE
+========================================= */
+
+window.onload = () => {
+
+  const savedLanguage =
+    localStorage.getItem("language") || "en";
+
+  setLanguage(savedLanguage);
+
+};
+
+</script>
 <body>
 
   <!-- ========================================= -->

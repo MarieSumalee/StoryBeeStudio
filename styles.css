@@ -390,6 +390,44 @@ ul{
 }
 
 /* ========================================= */
+/* LANGUAGE SWITCHER */
+/* ========================================= */
+
+.language-switcher{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+}
+
+.lang-btn{
+
+  border:none;
+
+  background:#fff4d1;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:0.3s;
+
+}
+
+.lang-btn:hover{
+
+  background:#f5bf23;
+
+  color:#111;
+
+}
+
+/* ========================================= */
 /* PLANS */
 /* ========================================= */
 
